@@ -22,9 +22,4 @@
     <ProjectReference Include="..\HotelReservation.EntityLayer\HotelReservation.EntityLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-
 </Project>
