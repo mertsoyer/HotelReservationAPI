@@ -13,5 +13,27 @@ namespace HotelReservation.WebUI.Controllers
         {
             return View();
         }
+
+        public IActionResult HeadPartial()
+        {
+            return PartialView();
+        }
+
+        public IActionResult PreLoaderPartial()
+        {
+            return PartialView();
+        }
+        public IActionResult NavHeaderPartial()
+        {
+            return PartialView();
+        }
+        public IActionResult HeaderPartial()
+        {
+            return PartialView();
+        }
+        public IActionResult SidebarPartial()
+        {
+            return PartialView();
+        }
     }
 }
