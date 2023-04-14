@@ -44,6 +44,14 @@ namespace HotelReservation.WebApi
             services.AddScoped<ITestimonialDal, EfTestimonialDal>();
             services.AddScoped<ITestimonialService, TestimonialManager>();
 
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("HotelApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+           
            
 
             services.AddControllers();
@@ -66,7 +74,7 @@ namespace HotelReservation.WebApi
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseCors("HotelApiCors");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
